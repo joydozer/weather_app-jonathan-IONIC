@@ -7,11 +7,12 @@
   </div>
   
   <div class="main">
-    <ion-searchbar class="custom" placeholder="City" [debounce]="1000" (ionInput)="handleSearch($event)"></ion-searchbar>  
+    <ion-searchbar class="custom" placeholder="City" [debounce]="1000" (click)="showSearchRecommendation()" (ionInput)="handleSearch($event)"></ion-searchbar>  
   </div>
-  
-  <ion-item button *ngFor="let result of results | slice:0:5">
-    <ion-label (click)="handleSelect(result)">{{ result }}</ion-label>
-  </ion-item>
+  <ng-container *ngIf="searchRecommendation">
+    <ion-item button *ngFor="let result of results | slice:0:5">
+      <ion-label (click)="handleSelect(result)">{{ result }}</ion-label>
+    </ion-item>
+  </ng-container>
   <ion-label> {{ current_city }} </ion-label>
 </ion-content>

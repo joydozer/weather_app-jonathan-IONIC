@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api_key: 'f7039b99de808f6c99378a94461b423c',
-  base_url: 'https://api.openweathermap.org/data/2.5/weather?lat=',
+  base_url: 'https://api.openweathermap.org/data/2.5/weather?lat',
   base_url2: 'https://api.openweathermap.org/data/2.5/weather?lat=1.487&lon=124.8455&units=metric&exclude=minutely,hourly,daily',
 };
 
