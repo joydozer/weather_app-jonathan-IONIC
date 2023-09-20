@@ -10,4 +10,4 @@ Aplikasi simpel berbasis Android untuk melihat cuaca bagi 45 kota.
 Simple application based on android with the purpose to see the weather of 45 citites.
 
 ### Download
-Link Google Drive: https://drive.google.com/file/d/1SbwnSlG2Mw6hbmsJYORGX9_G4eLOwXS8/view?usp=drive_link
+Link Google Drive: https://drive.google.com/file/d/1XxvrdEVs9PLlqWuwYR66s1r3G59ZtJ9j/view?usp=sharing
