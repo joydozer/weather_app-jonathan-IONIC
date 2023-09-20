@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Weather } from 'src/app/home/home.service';
 @Component({
   selector: 'app-home',
@@ -66,7 +65,9 @@ export class HomePage implements OnInit{
     'Zhengzhou, CN'
   ];
   public results = [...this.city];
-  
+  //API
+  api_key: String = 'f7039b99de808f6c99378a94461b423c';
+  base_url: String = 'https://api.openweathermap.org/data/2.5/weather?lat';
   //Lat & Lon default kota Manado, diset dalam coord: [lat, lon]
   coord = [1.487, 124.8455];
   current_city: String = 'Manado, ID';
@@ -81,7 +82,7 @@ export class HomePage implements OnInit{
   weather = [];
 
   getWeatherInfo(): Observable<Weather> {
-    return this.http.get<Weather>(`${environment.base_url}=${this.coord[0]}&lon=${this.coord[1]}&units=metric&exclude=minutely,hourly,daily&appid=${environment.api_key}`);
+    return this.http.get<Weather>(`${this.base_url}=${this.coord[0]}&lon=${this.coord[1]}&units=metric&exclude=minutely,hourly,daily&appid=${this.api_key}`);
   }
 
   handleSearch(x: any) {
