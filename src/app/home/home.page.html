@@ -6,7 +6,7 @@
     <img src="{{ bgImg }}" width="2000px" />
   </div>
   
-  <div class="main">
+  <div class="searchbar">
     <ion-searchbar class="custom" placeholder="City" [debounce]="1000" (click)="showSearchRecommendation()" (ionInput)="handleSearch($event)"></ion-searchbar>  
   </div>
   <ng-container *ngIf="searchRecommendation">
@@ -14,5 +14,29 @@
       <ion-label (click)="handleSelect(result)">{{ result }}</ion-label>
     </ion-item>
   </ng-container>
-  <ion-label> {{ current_city }} </ion-label>
+  <div class="main">
+    <div style="text-align: center;">
+      <h1> {{ current_city }} </h1>
+    </div>
+    <div class="main_desc">
+      <div style="display: flex; flex-direction: row;">
+        <h4> {{ current_weather_desc }} </h4>
+        <img src="{{ icon }}" width="50">
+      </div>
+      <h4> {{ temp }}° C</h4>
+      
+    </div>
+    <div class="detail_weather">
+      <div>
+        <h5>Humidity:</h5>
+        <h5>Pressure:</h5>
+        <h5>Wind:</h5>
+      </div>
+      <div>
+        <h5>{{ humidity }}%</h5>
+        <h5>{{ pressure }}hPa</h5>
+        <h5>{{ wind }}m/s</h5>
+      </div>
+    </div>
+  </div>
 </ion-content>

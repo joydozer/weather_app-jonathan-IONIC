@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+h1, h4, h5, p {
+  font-family: 'Inter', sans-serif;
+}
 //Macchiato Catppuccin Color
 
 ion-content {
@@ -31,7 +35,7 @@ ion-header {
   }
 }
 
-.main {
+.searchbar {
   display: flex;
   justify-content: center;
 }
@@ -42,4 +46,23 @@ ion-searchbar.custom {
   width: 350px;
   height: 64px;
   padding: 0 20px 0 20px;
+}
+
+.main .main_desc, .detail_weather {
+  display: flex;
+}
+
+.main {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main_desc {
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.detail_weather {
+  justify-content: center;
+  gap: 50px;
 }
